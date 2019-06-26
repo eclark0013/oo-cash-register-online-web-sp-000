@@ -12,6 +12,7 @@ class CashRegister
       @total += price.to_f
     else
       @total += price.to_f*quantity
+    end
     @items<<item
   end
 
