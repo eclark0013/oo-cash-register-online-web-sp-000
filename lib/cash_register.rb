@@ -10,10 +10,11 @@ class CashRegister
   def add_item(item, price, quantity=nil)
     if quantity==nil
       @total += price.to_f
+      @items<<item
     else
       @total += price.to_f*quantity
+      @items<<item*quantity
     end
-    @items<<item
   end
 
   def apply_discount
