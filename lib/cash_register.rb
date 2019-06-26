@@ -7,8 +7,11 @@ class CashRegister
     @items=[]
   end
 
-  def add_item(item, price)
-    @total+=price.to_f
+  def add_item(item, price, quantity=nil)
+    if quantity==nil
+      @total += price.to_f
+    else
+      @total += price.to_f*quantity
     @items<<item
   end
 
