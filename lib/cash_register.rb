@@ -9,7 +9,7 @@ class CashRegister
 
   def add_item(item, price)
     @total+=price.to_f
-    items
+    @items<<item
   end
 
   def apply_discount
